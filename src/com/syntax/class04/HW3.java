@@ -10,9 +10,9 @@ public class HW3 {
         goto:http://syntaxprojects.com/input-form-demo.php
 fill in all the textboxes in the form (edited)
          */
+        System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
 
-        System.setProperty("webdriver.chrome.driver","drivers/chromedriver");
-        WebDriver driver=new ChromeDriver();
         driver.get("http://syntaxprojects.com/input-form-demo.php");
         driver.findElement(By.cssSelector("input[name *='first_name']")).sendKeys("Olga");
         driver.findElement(By.cssSelector("input[name *='last_name']")).sendKeys("Krasnova");
@@ -25,7 +25,7 @@ fill in all the textboxes in the form (edited)
         driver.findElement(By.cssSelector("input[name *='zip']")).sendKeys("22060");
         driver.findElement(By.cssSelector("input[name *='website']")).sendKeys("www.website.com");
         driver.findElement(By.xpath("//input[@name='hosting'][@value='no']")).click();
-        driver.findElement(By.cssSelector("textarea[name *='comment']")).sendKeys("hello");
+        driver.findElement(By.cssSelector("textarea[name *='comment']")).sendKeys("helloBatch11");
         Thread.sleep(4000);
         driver.findElement(By.xpath("//button[@class='btn btn-default']")).click();
         driver.quit();
